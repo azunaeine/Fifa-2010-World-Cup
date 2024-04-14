@@ -1,0 +1,203 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr 10em);
+  grid-template-rows: 1fr 1fr;
+}
+
+.FIFA2010 {
+  width: 100%;
+  grid-column: 3 / 5;
+}
+
+.ball {
+  width: 100%;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.audio-toggle-button {
+  display: none;
+}
+
+.emblem {
+  grid-column: 3 / 5;
+  width: 100%;
+}
+
+.spain {
+  grid-column: 1 / 3;
+  grid-row: 1;
+  width: 100%;
+}
+.summary {
+  text-align: center;
+  font-size: 1em;
+  line-height: 1.5em;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  padding: 1em;
+  background-color: #e4e8f0;
+  width: 100%;
+  border: black 2px solid;
+}
+
+.p-one {
+  display: none;
+}
+
+.p-two {
+  display: none;
+}
+
+.p-three {
+  display: none;
+}
+
+.spain-p {
+  display: none;
+}
+
+.logo-p {
+  display: none;
+}
+.poster-p {
+  display: none;
+}
+
+.ball-p {
+  display: none;
+}
+
+.p-four {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .FIFA2010 {
+    grid-column: 6 / 7;
+    grid-row: 2 / 3;
+  }
+
+  .emblem {
+    grid-column: 8 / 9;
+    grid-row: 1 / 3;
+  }
+
+  .ball {
+    grid-column: 1/3;
+  }
+
+  .spain {
+    grid-column: 4 / 5;
+    grid-row: 1;
+    width: 100%;
+  }
+  .spain-p,
+  .poster-p,
+  .logo-p,
+  .ball-p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .spain {
+    grid-column: 4 / 6;
+  }
+
+  .spain,
+  .emblem,
+  .ball,
+  .FIFA2010 {
+    opacity: 1;
+    border: solid black 2px;
+  }
+
+  .spain-p {
+    display: block;
+    grid-column: 4/6;
+    position: relative;
+    bottom: 6em;
+    line-height: 1.8em;
+    grid-row: 2;
+  }
+
+  .logo-p {
+    display: block;
+    grid-column: 8 / 9;
+    grid-row: 1;
+    line-height: 1.8em;
+    align-self: start;
+    margin-top: 12em;
+  }
+
+  .poster-p {
+    display: block;
+    grid-column: 6 / 7;
+    grid-row: 1;
+    align-self: end;
+  }
+
+  .ball-p {
+    display: block;
+    grid-column: 1;
+    grid-row: 1 / 2;
+    align-self: center;
+    margin-top: 16.5em;
+  }
+
+  .grid {
+    margin-top: 2em;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .p-one {
+    display: block;
+    grid-row: 1 / 2;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .p-two {
+    display: block;
+    grid-row: 1;
+    grid-column: 7 / 8;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .p-three {
+    display: block;
+    grid-row: 2;
+    grid-column: 4;
+    font-family: "Poppins", sans-serif;
+  }
+  .p-four {
+    display: block;
+    grid-row: 2;
+    grid-column: 8;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .audio-toggle-button {
+    display: block;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1;
+  }
+}

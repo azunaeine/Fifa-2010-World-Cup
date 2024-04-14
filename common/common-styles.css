@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.outer {
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 0.5rem;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 3em;
+}
+
+.inner {
+  display: flex;
+  gap: 9px;
+}
+
+h2.title {
+  text-align: center;
+  font-size: 3em;
+  font-family: "Libre Baskerville", serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #2f6297;
+}
+
+.bigtitle {
+  display: none;
+}
+
+.subject {
+  font-size: 0.3rem;
+  font-family: "Poppins", sans-serif;
+}
+
+@media screen and (min-width: 768px) {
+  .subject {
+    font-size: 0.6rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .subject {
+    font-size: 1em;
+  }
+
+  .bigtitle {
+    text-align: center;
+    font-size: 13em;
+    display: block;
+    font-family: "Libre Baskerville", serif;
+  }
+
+  .logo {
+    width: 5em;
+  }
+
+  .bigtitle {
+    text-align: center;
+    font-size: 13em;
+    display: block;
+    font-family: "Libre Baskerville", serif;
+  }
+
+  .subject:hover {
+    color: #2f6296;
+  }
+
+  .fade-in {
+    animation: fade-in 1s ease-in-out forwards;
+  }
+}

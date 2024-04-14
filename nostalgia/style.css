@@ -1,0 +1,71 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.flexbox {
+  display: flex;
+  margin-top: 1em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.3em;
+}
+
+.stadium2 {
+  width: 12em;
+  border: solid black 2px;
+}
+
+.vuvuzela {
+  width: 12em;
+  border: solid black 2px;
+}
+
+.film {
+  width: 12em;
+  border: solid black 2px;
+}
+
+p {
+  line-height: 2em;
+  padding: 1em 1em;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media screen and (min-width: 768px) {
+  .flexbox {
+    flex-direction: row;
+  }
+
+  .vuvuzela {
+    width: 21em;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .vuvuzela {
+    width: 28em;
+  }
+
+  .film {
+    width: 13em;
+  }
+
+  .stadium2 {
+    width: 17em;
+  }
+
+  p {
+    font-size: 1.3rem;
+    line-height: 2.5em;
+  }
+
+  .flexbox {
+    padding-right: 4em;
+  }
+}

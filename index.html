@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="common/common-styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Home</title>
+  </head>
+  <body>
+    <button class="audio-toggle-button" onclick="toggleAudio()">
+      <i class="fas fa-volume-mute"></i>
+    </button>
+    <audio>
+      <source src="audio/wakawaka.mp3" type="audio/mp3" />
+    </audio>
+    <main>
+      <div class="outer">
+        <div class="inner">
+          <a class="subject" href="collective memory/index.html">
+            Collective Memory Overview
+          </a>
+          <a class="subject" href="cultural/index.html">
+            Cultural Significance
+          </a>
+          <a class="subject" href="nostalgia/index.html"> Nostalgia </a>
+          <a class="subject" href="invention/index.html"> Invention </a>
+          <a class="subject" href="/forget/index.html"> Forgetting</a>
+        </div>
+        <a href="index.html">
+          <img src="img/logo.png" class="logo" />
+        </a>
+      </div>
+      <div class="words">
+        <h2 class="title">2010 FIFA WORLD CUP</h2>
+        <h2 class="summary">
+          This website gives a full sense of what the collective memory is, and
+          communicates my perspective on its cultural significance
+        </h2>
+      </div>
+      <div class="grid">
+        <img src="img/FIFA2010.jpg" class="FIFA2010" />
+        <p class="spain-p">
+          Spain lifting the FIFA World Cup in 2010, becoming the world champions
+        </p>
+        <img src="img/emblem.png" class="emblem" />
+        <p class="logo-p">The official logo of the FIFA World Cup in 2010</p>
+        <img src="img/ball.jpeg" class="ball" />
+        <p class="poster-p">A poster used in the FIFA World Cup in 2010</p>
+        <img src="img/spain.jpeg" class="spain" />
+        <p class="ball-p">
+          This is the official ball of the 2010 FIFA World Cup
+        </p>
+        <p class="p-one">
+          The 2010 FIFA World Cup was hosted by South Africa. It was the first
+          time the tournament was held on the African continent.
+        </p>
+        <p class="p-two">
+          The tournament took place from June 11 to July 11, 2010
+        </p>
+        <p class="p-three">
+          Spain won the tournament, defeating the Netherlands 1-0 in the final.
+          The only goal of the match was scored by Andrés Iniesta in the 116th
+          minute of extra time.
+        </p>
+        <p class="p-four">
+          The closing ceremony of the 2010 World Cup featured performances by
+          Shakira, Juanes, and other artists, celebrating the end of a memorable
+          tournament.
+        </p>
+      </div>
+      <h1 class="bigtitle">Never Forget</h1>
+      <script>
+        function toggleAudio() {
+          const button = document.querySelector(".audio-toggle-button");
+          const icon = button.querySelector("i");
+          // Get the audio element
+          const audioElement = document.querySelector("audio");
+          console.log(audioElement);
+          // Play the audio
+          const isMuted = icon.classList.contains("fa-volume-mute");
+          if (isMuted) {
+            icon.classList.remove("fa-volume-mute");
+            audioElement.play();
+            icon.classList.add("fa-volume-up");
+          } else {
+            audioElement.pause();
+            icon.classList.remove("fa-volume-up");
+            icon.classList.add("fa-volume-mute");
+          }
+
+          // Add your audio-related logic here
+          console.log("Audio toggled");
+        }
+
+        function animateImageIn(imageElement) {
+          // Set initial styles
+          imageElement.style.opacity = 0;
+          imageElement.style.transform =
+            "translateX(-10px) rotate(-5deg) scale(0.95)";
+
+          // Animate the image in
+          imageElement
+            .animate(
+              [
+                {
+                  opacity: 0,
+                  transform: "translateX(-10px) rotate(-360deg) scale(0.55)",
+                },
+                {
+                  opacity: 1,
+                  transform: "translateX(0) rotate(0) scale(1)",
+                },
+              ],
+              {
+                duration: 500,
+                easing: "ease-out",
+              }
+            )
+            .finished.then(() => {
+              // Reset the t
+              // Reset the transform after the animation is complete
+              imageElement.style.transform = "none";
+              imageElement.style.opacity = "1";
+            });
+        }
+        const main = document.querySelector("main");
+        animateImageIn(main);
+      </script>
+    </main>
+  </body>
+</html>
