@@ -36,6 +36,14 @@ h2.title {
 
 .bigtitle {
   display: none;
+  margin-top: auto;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100vh;
 }
 
 .subject {
